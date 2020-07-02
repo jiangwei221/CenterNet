@@ -246,7 +246,7 @@ class opts(object):
     if opt.head_conv == -1: # init default head_conv
       opt.head_conv = 256 if 'dla' in opt.arch else 64
     opt.pad = 127 if 'hourglass' in opt.arch else 31
-    opt.num_stacks = 2 if opt.arch == 'hourglass' else 1
+    opt.num_stacks = 1 if opt.arch == 'hourglass' else 1
 
     if opt.trainval:
       opt.val_intervals = 100000000
